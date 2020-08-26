@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/txtGris"
+    android:background="@color/colorFondoClaro"
     android:fillViewport="true">
 
 
@@ -26,7 +26,7 @@
             android:id="@+id/img_fondo"
             android:layout_width="220dp"
             android:layout_height="220dp"
-            app:tint="@color/colorFondoNegro"
+            app:tint="@color/colorFondoOscuro"
             app:layout_constraintBottom_toBottomOf="@+id/img_circle"
             app:layout_constraintEnd_toEndOf="@+id/img_casco"
             app:layout_constraintStart_toStartOf="@+id/img_casco"

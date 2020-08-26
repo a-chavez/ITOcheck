@@ -15,15 +15,15 @@ import com.example.itocheck.databinding.FragmentSecondBinding;
 
 public class SecondFragment extends Fragment {
     private FragmentSecondBinding mBinding;
-    private String txt1,txt2,txt3;
+    private String tv1,tv2,tv3;
     private String url;
 
     public void onCreate(Bundle saved) {
         super.onCreate(saved);
         if (getArguments() != null) {
-            txt1 = getArguments().getString("edi");
-            txt2 = getArguments().getString("num");
-            txt3 = getArguments().getString("dir");
+            tv1 = getArguments().getString("edi");
+            tv2 = getArguments().getString("num");
+            tv3 = getArguments().getString("dir");
             url = getArguments().getString("url");
         }
     }
@@ -37,9 +37,9 @@ public class SecondFragment extends Fragment {
     ) {
         // Inflate the layout for this fragment
         mBinding = FragmentSecondBinding.inflate(inflater,container,false);
-        mBinding.txt1.setText(txt1);
-        mBinding.txt2.setText(txt2);
-        mBinding.txt3.setText(txt3);
+        mBinding.tvEdif.setText(tv1);
+        mBinding.tvDep.setText(tv2);
+
         Glide.with(getContext()).load(url).centerCrop().into(mBinding.imageView);
 
         return mBinding.getRoot();
