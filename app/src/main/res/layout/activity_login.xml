@@ -99,7 +99,7 @@
             app:layout_constraintEnd_toEndOf="@+id/img_circle"
             app:layout_constraintStart_toStartOf="@+id/img_circle"
             app:layout_constraintTop_toTopOf="@+id/img_circle"
-            app:srcCompat="@drawable/ic_launcher_foreground" />
+            app:srcCompat="@drawable/casco" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

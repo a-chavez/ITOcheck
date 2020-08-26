@@ -26,5 +26,9 @@
     <string name="normal">Terminaciones Normales</string>
     <string name="regular">Terminaciones Regulares</string>
     <string name="Malas">Terminaciones Malas</string>
-
+    <string name="Puntaje">Puntaje</string>
+    <string name="btVolver">Volver</string>
+    <string name="btGuardar">Guardar</string>
+    <string name="brAlerta">Enviar Alerta</string>
+    <string name="Puntos">00</string>
 </resources>
