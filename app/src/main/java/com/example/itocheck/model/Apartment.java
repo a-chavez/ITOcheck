@@ -1,4 +1,4 @@
-package com.example.itocheck;
+package com.example.itocheck.model;
 
 public class Apartment {
 

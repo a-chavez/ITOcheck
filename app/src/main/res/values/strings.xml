@@ -13,6 +13,10 @@
     <string name="UserLogin">Ingrese Usuario</string>
     <string name="PassLogin">Ingrese Password</string>
     <string name="Ingresar">Ingresar</string>
-
+    <string name="apart">apart</string>
+    <string name="title">title</string>
+    <string name="nombreEdi">Nombre Edificio</string>
+    <string name="numeroEdi">Dep.000</string>
+    <string name="direccEdi">Direccion</string>
 
 </resources>

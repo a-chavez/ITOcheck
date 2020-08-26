@@ -11,16 +11,18 @@ import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.itocheck.adapter.ItemAdapter;
 import com.example.itocheck.databinding.FragmentFirstBinding;
+import com.example.itocheck.model.Apartment;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class FirstFragment extends Fragment {
+public class FirstFragment extends Fragment implements ItemAdapter.PassElementSelected{
 
     private FragmentFirstBinding mBinding;
     private RecyclerView mRecyclerView;
-    private Apartment mApartment;
+    private ItemAdapter mItemAdapter;
 
     @Override
     public View onCreateView(
@@ -28,21 +30,19 @@ public class FirstFragment extends Fragment {
             Bundle savedInstanceState
     ) {
         // Inflate the layout for this fragment
-        mBinding = FragmentFirstBinding.inflate(inflater, container,false);
-        mRecyclerView = mBinding.rvItem;
-        //    mItemAdapter = new ItemAdapter(returnItemList(), this);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-     //   mRecyclerView.setAdapter(mItemAdapter);
 
+        mBinding = FragmentFirstBinding.inflate(inflater,container,false);
+        mRecyclerView = mBinding.rvItem;
+        mItemAdapter = new ItemAdapter(apartmentList(), this);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        mRecyclerView.setAdapter(mItemAdapter);
 
         return mBinding.getRoot();
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
     }
-
 
     public static List<Apartment> apartmentList() {
         List<Apartment> apartmentList = new ArrayList<>();
@@ -79,5 +79,8 @@ public class FirstFragment extends Fragment {
         return apartmentList;
     }
 
+    @Override
+    public void passElement(Apartment apartment) {
 
+    }
 }

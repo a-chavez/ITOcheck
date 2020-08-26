@@ -24,6 +24,7 @@ public class Login extends AppCompatActivity {
             public void onClick(View view) {
                checkPass(mBinding.etPass.getText().toString());
                 Toast.makeText(Login.this, "Llevas "+count+" Intentos. Con mas de 3 no podras entrar", Toast.LENGTH_SHORT).show();
+                if (count>3) mBinding.btLogin.setVisibility(View.INVISIBLE);
             }
         });
     }
