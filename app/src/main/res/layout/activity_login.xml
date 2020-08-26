@@ -1,24 +1,15 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorFondoNegro"
+    android:background="@color/txtGris"
     android:fillViewport="true">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
-    <ImageView
-        android:id="@+id/img_casco"
-        android:layout_width="254dp"
-        android:layout_height="199dp"
-        app:layout_constraintBottom_toBottomOf="@+id/img_circle"
-        app:layout_constraintEnd_toEndOf="@+id/img_circle"
-        app:layout_constraintStart_toStartOf="@+id/img_circle"
-        app:layout_constraintTop_toTopOf="@+id/img_circle"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
 
         <ImageView
             android:id="@+id/img_circle"
@@ -31,6 +22,17 @@
             app:srcCompat="@drawable/circulo_contorno"
             app:tint="@color/colorPrimary" />
 
+        <ImageView
+            android:id="@+id/img_fondo"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            app:tint="@color/colorFondoNegro"
+            app:layout_constraintBottom_toBottomOf="@+id/img_circle"
+            app:layout_constraintEnd_toEndOf="@+id/img_casco"
+            app:layout_constraintStart_toStartOf="@+id/img_casco"
+            app:layout_constraintTop_toTopOf="@+id/img_circle"
+            app:srcCompat="@drawable/circulo_lleno" />
+
         <EditText
             android:id="@+id/et_user_login"
             android:layout_width="0dp"
@@ -41,7 +43,6 @@
             android:ems="10"
             android:hint="@string/UserLogin"
             android:inputType="textPersonName"
-            android:textColor="@color/txtBlanco"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/img_circle" />
@@ -61,18 +62,44 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/et_user_login" />
 
-    <Button
-        android:id="@+id/bt_login"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:text="@string/Ingresar"
-        android:background="@drawable/button_rounded"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_pass" />
+        <Button
+            android:id="@+id/bt_login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/button_rounded"
+            android:text="@string/Ingresar"
+            android:textColor="#EEFFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_pass" />
+
+        <Button
+            android:id="@+id/bt_cerrar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="100dp"
+            android:background="@drawable/button__rouded_border"
+            android:text="@string/Salir"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bt_login" />
+
+        <ImageView
+            android:id="@+id/img_casco"
+            android:layout_width="254dp"
+            android:layout_height="199dp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_circle"
+            app:layout_constraintEnd_toEndOf="@+id/img_circle"
+            app:layout_constraintStart_toStartOf="@+id/img_circle"
+            app:layout_constraintTop_toTopOf="@+id/img_circle"
+            app:srcCompat="@drawable/ic_launcher_foreground" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -81,6 +82,14 @@ public class FirstFragment extends Fragment implements ItemAdapter.PassElementSe
 
     @Override
     public void passElement(Apartment apartment) {
+        Bundle b = new Bundle();
+        b.putString("edi", apartment.getBuildingName());
+        b.putString("num", apartment.getUnitId());
+        b.putString("dir", apartment.getAddress());
+        b.putString("url", apartment.getUrlImageBuilding());
+        Navigation.findNavController(mBinding.getRoot()).navigate(R.id.action_FirstFragment_to_SecondFragment,b);
+
+
 
     }
 }

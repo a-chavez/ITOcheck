@@ -27,6 +27,14 @@ public class Login extends AppCompatActivity {
                 if (count>3) mBinding.btLogin.setVisibility(View.INVISIBLE);
             }
         });
+
+        mBinding.btCerrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               finish();
+            }
+        });
+
     }
 
  public void checkPass (String pass){

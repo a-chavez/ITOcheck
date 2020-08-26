@@ -39,9 +39,6 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
         holder.tv2.setText(apartment.getUnitId());
         holder.tv3.setText(apartment.getAddress());
         Glide.with(holder.itemView.getContext()).load(apartment.getUrlImageBuilding()).into(holder.img);
-
-
-
     }
 
     @Override
@@ -53,7 +50,6 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
 
         private ImageView img;
         private TextView tv1, tv2, tv3;
-
 
         public ItemViewHolder(@NonNull ItemLayoutBinding mBinding) {
             super(mBinding.getRoot());

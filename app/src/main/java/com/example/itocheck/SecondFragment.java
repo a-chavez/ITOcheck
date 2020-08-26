@@ -9,7 +9,26 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+import com.bumptech.glide.Glide;
+import com.example.itocheck.databinding.FragmentFirstBinding;
+import com.example.itocheck.databinding.FragmentSecondBinding;
+
 public class SecondFragment extends Fragment {
+    private FragmentSecondBinding mBinding;
+    private String txt1,txt2,txt3;
+    private String url;
+
+    public void onCreate(Bundle saved) {
+        super.onCreate(saved);
+        if (getArguments() != null) {
+            txt1 = getArguments().getString("edi");
+            txt2 = getArguments().getString("num");
+            txt3 = getArguments().getString("dir");
+            url = getArguments().getString("url");
+        }
+    }
+
+
 
     @Override
     public View onCreateView(
@@ -17,7 +36,13 @@ public class SecondFragment extends Fragment {
             Bundle savedInstanceState
     ) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_second, container, false);
+        mBinding = FragmentSecondBinding.inflate(inflater,container,false);
+        mBinding.txt1.setText(txt1);
+        mBinding.txt2.setText(txt2);
+        mBinding.txt3.setText(txt3);
+        Glide.with(getContext()).load(url).centerCrop().into(mBinding.imageView);
+
+        return mBinding.getRoot();
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
@@ -31,4 +56,8 @@ public class SecondFragment extends Fragment {
             }
         });
     }
+
+
+
+
 }
