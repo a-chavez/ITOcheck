@@ -45,7 +45,7 @@
         android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
         android:text="@string/check1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -93,7 +93,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -130,6 +130,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
@@ -184,21 +185,39 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/fondoBarra"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="@+id/fondoBarra"
         app:layout_constraintTop_toBottomOf="@+id/tvPuntos"
         app:layout_constraintVertical_bias="0.86" />
 
     <ImageButton
-        android:id="@+id/ibBack"
+        android:id="@+id/ibCalcular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/colorPrimary"
-        android:src="@android:drawable/ic_menu_revert"
+        android:src="@android:drawable/ic_menu_slideshow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/ibAlert"
         app:layout_constraintStart_toStartOf="@+id/fondoBarra"
         app:layout_constraintTop_toBottomOf="@+id/tvPuntos"
         app:layout_constraintVertical_bias="0.86" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        app:layout_constraintBottom_toTopOf="@+id/ibCalcular"
+        app:layout_constraintEnd_toEndOf="@+id/ibCalcular"
+        app:layout_constraintStart_toStartOf="@+id/ibCalcular" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Grabar"
+        app:layout_constraintBottom_toTopOf="@+id/ibSave"
+        app:layout_constraintEnd_toEndOf="@+id/ibSave"
+        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintStart_toStartOf="@+id/ibSave" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

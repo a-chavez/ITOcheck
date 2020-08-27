@@ -2,6 +2,7 @@ package com.example.itocheck.presenter;
 
 public interface IViewPresenter {
 
-    void show();
+    void showAlert(int score);
+    void showNormal(int score);
 
 }

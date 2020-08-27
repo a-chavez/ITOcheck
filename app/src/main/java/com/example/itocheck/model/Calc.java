@@ -2,12 +2,12 @@ package com.example.itocheck.model;
 
 public class Calc implements ICalc{
 
-    public static final int LIMITE = 130;
 
+/*
     public static final int NORMAL = 3;
     public static final int REGULAR = 2;
     public static final int MALAS = 1;
-
+*/
     public static final int LUCES_APART = 10;
     public static final int ELEM_BANO = 40;
     public static final int ELEM_COCINA =30;
@@ -24,10 +24,5 @@ public class Calc implements ICalc{
         return score*e;
     }
 
-    @Override
-    public boolean alert(int score) {
-        if(score<LIMITE) return true;
-        return false;
-    }
 
 }
