@@ -20,6 +20,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
     private List<Apartment> apartmentList;
     private PassElementSelected mListener;
 
+
     public ItemAdapter(List<Apartment> apartmentList, PassElementSelected mListener) {
         this.apartmentList = apartmentList;
         this.mListener = mListener;
@@ -34,6 +35,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull ItemViewHolder holder, int position) {
+
         Apartment apartment = apartmentList.get(position);
         holder.tv1.setText(apartment.getBuildingName());
         holder.tv2.setText(apartment.getUnitId());
@@ -62,8 +64,8 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
 
         @Override
         public void onClick(View view) {
-        int position = getLayoutPosition();
-        Apartment element = apartmentList.get(position);
+        int  p = getLayoutPosition();
+        Apartment element = apartmentList.get(p);
         mListener.passElement(element);
         }
     }
@@ -71,5 +73,6 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
     public interface PassElementSelected {
         void passElement(Apartment apartment);
     }
+
 
 }

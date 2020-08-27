@@ -53,6 +53,7 @@ public class FirstFragment extends Fragment implements ItemAdapter.PassElementSe
         b.putString("num", apartment.getUnitId());
         b.putString("dir", apartment.getAddress());
         b.putString("url", apartment.getUrlImageBuilding());
+        b.putInt("id",apartment.getId());
         Navigation.findNavController(mBinding.getRoot()).navigate(R.id.action_FirstFragment_to_SecondFragment,b);
 
     }
